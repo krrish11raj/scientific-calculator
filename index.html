@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calc-wrap">
+    <div class="display">
+      <div class="history" id="history"></div>
+      <div class="screen" id="display">0</div>
+    </div>
+
+    <div class="mode-bar">
+      <button class="mode-btn active" onclick="setMode('basic')">Basic</button>
+      <button class="mode-btn" onclick="setMode('sci')">Scientific</button>
+      <button class="mode-btn" onclick="toggleHistory()">History</button>
+    </div>
+
+    <div class="sci-grid" id="sciGrid">
+      <button onclick="calcFn('sin')">sin</button>
+      <button onclick="calcFn('cos')">cos</button>
+      <button onclick="calcFn('tan')">tan</button>
+      <button onclick="calcFn('log')">log</button>
+      <button onclick="calcFn('ln')">ln</button>
+      <button onclick="calcFn('sqrt')">√</button>
+      <button onclick="calcFn('sq')">x²</button>
+      <button onclick="insertConst('Math.PI')">π</button>
+    </div>
+
+    <div class="btn-grid">
+      <button class="clear" onclick="clearAll()">AC</button>
+      <button onclick="toggleSign()">+/−</button>
+      <button onclick="percent()">%</button>
+      <button class="op" onclick="op('/')">÷</button>
+
+      <button onclick="digit('7')">7</button>
+      <button onclick="digit('8')">8</button>
+      <button onclick="digit('9')">9</button>
+      <button class="op" onclick="op('*')">×</button>
+
+      <button onclick="digit('4')">4</button>
+      <button onclick="digit('5')">5</button>
+      <button onclick="digit('6')">6</button>
+      <button class="op" onclick="op('-')">−</button>
+
+      <button onclick="digit('1')">1</button>
+      <button onclick="digit('2')">2</button>
+      <button onclick="digit('3')">3</button>
+      <button class="op" onclick="op('+')">+</button>
+
+      <button onclick="digit('0')" class="zero">0</button>
+      <button onclick="dot()">.</button>
+      <button class="eq" onclick="equals()">=</button>
+    </div>
+
+    <div class="history-panel" id="histPanel">
+      <p class="hist-label">Calculation History</p>
+      <div id="histList"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
