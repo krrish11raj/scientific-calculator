@@ -15,7 +15,7 @@ A fully functional scientific calculator built with HTML, CSS, and JavaScript.
 - JavaScript (ES6)
 
 ## Live Demo
-[Click here to use the calculator](#) ← baad mein GitHub Pages link daalna
+[Click here to use the calculator](https://krrish11raj.github.io/scientific-calculator)
 
 ## How to Run Locally
 1. Clone this repository
